@@ -27,6 +27,7 @@ export default class Signup extends Component {
       })
       .then(() => {
         alert("data added")
+        this.props.navigation.navigate('Login')
         
       });
   }
@@ -60,9 +61,9 @@ export default class Signup extends Component {
           {{
             textAlign: 'center', fontSize: 23, margin: 20, borderWidth: 2
           }}> SignUP </Text>
-          <TouchableOpacity  onPress={() => this.props.navigation.navigate('Login')} style={{ borderWidth: 1, alignContent: 'center' }}>
+          {/* <TouchableOpacity  onPress={() => this.props.navigation.navigate('Login')} style={{ borderWidth: 1, alignContent: 'center' }}>
                     <Text style={{ fontSize: 28, textAlign: 'center' }}> Go For Login </Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
       </View>
     )
   }

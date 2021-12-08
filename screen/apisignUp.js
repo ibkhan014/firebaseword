@@ -14,7 +14,7 @@ export default class ApiSignUP extends Component {
   }
 
   SignUP = () => {
- axios.post('https://apis.jahanzaibb.online/api/register', {
+    axios.post('https://apis.jahanzaibb.online/api/register', {
       email: this.state.email,
       password: this.state.password,
       address: this.state.address,
@@ -22,7 +22,7 @@ export default class ApiSignUP extends Component {
     })
       .then
     { this.props.navigation.navigate('LoginApi') }
-}
+  }
 
   addeamilAdress = email1 => {
     this.setState({ email: email1 })
@@ -66,28 +66,3 @@ export default class ApiSignUP extends Component {
     );
   }
 };
-
-
-
-
-
-
-  // try {
-    //   axios({
-    //     method: 'post',
-    //     url: 'http://apis.jahanzaibb.online/api/register',
-    //     data: {
-    //      email:this.state.email,
-    //      password:this.state.password,
-    //      address:this.state.address,
-    //      username:this.state.username
-    //     }
-    //   })
-
-    // }
-
-    // catch (error) {
-    //   console.log(error);
-    // }
-
-    // }
